@@ -1,0 +1,66 @@
+﻿/* General container */
+.container_form {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Poppins, sans-serif;
+    padding: 20px;
+}
+
+/* Form styling */
+.form-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Section styling */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+h2 {
+    font-size: 22px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    input[type="submit"]:hover {
+        background-color: #c0392b;
+    }

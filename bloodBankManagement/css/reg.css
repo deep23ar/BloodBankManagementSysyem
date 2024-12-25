@@ -1,0 +1,107 @@
+﻿/* General Styles */
+/*body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+/*    height: 100vh;*/
+/*}*/
+
+#container_main {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 472px;
+    margin: auto;
+}
+
+    /* Labels */
+    #container_main label {
+/*        display: block;*/
+        margin-bottom: 8px;
+/*        font-weight: bold;*/
+        color: #333;
+    }
+
+    /* TextBoxes */
+    #container_main input[type="text"],
+    #container_main input[type="date"],
+    #container_main input[type="password"],
+    #container_main input[type="email"],
+    #container_main select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    /* Radio Button List */
+    #container_main .aspNet-RadioButtonList {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+        /* Radio Button Items */
+        #container_main .aspNet-RadioButtonList input {
+            margin-right: 5px;
+        }
+
+
+
+    /* Dropdown */
+    #container_main select {
+        background-color: #fff;
+    }
+
+    /* Buttons */
+    #container_main .btn {
+        display: inline-block;
+        width: calc(50% - 5px);
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #container_main #Button2s {
+        background-color: #363636;
+    }
+
+
+#container_main .btn:hover {
+    background-color: #0056b3;
+}
+
+        /* Cancel Button */
+        #container_main .btn:nth-of-type(2) {
+            background-color: #dc3545;
+        }
+
+            #container_main .btn:nth-of-type(2):hover {
+                background-color: #b02a37;
+            }
+
+    /* Message Label */
+    #container_main #lblMsg {
+        margin-top: 15px;
+        display: block;
+        font-size: 14px;
+        color: #555;
+        text-align: center;
+    }

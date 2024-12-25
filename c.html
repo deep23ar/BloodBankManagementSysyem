@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .certificate-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .certificate {
+            width: 80%;
+            margin: 20px auto;
+            padding: 40px;
+            border: 10px solid #2c3e50;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .certificate-header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .certificate-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #16a085;
+            margin: 20px 0;
+        }
+        .certificate-content {
+            font-size: 18px;
+            color: #34495e;
+            margin: 20px 0;
+        }
+        .certificate-recipient {
+            font-size: 28px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 20px 0;
+        }
+        .certificate-footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        .certificate-issuer {
+            margin-top: 40px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        .download-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .download-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate-container">
+        <div id="certificate" class="certificate">
+            <div class="certificate-header">
+                Certificate of Achievement
+            </div>
+            <div class="certificate-content">
+                This is to certify that
+            </div>
+            <div class="certificate-recipient">
+                John Doe
+            </div>
+            <div class="certificate-content">
+                has successfully completed the requirements for
+            </div>
+            <div class="certificate-title">
+                Certificate of Excellence
+            </div>
+            <div class="certificate-content">
+                Presented on December 23, 2024
+            </div>
+            <div class="certificate-issuer">
+                Issued by: XYZ Organization
+            </div>
+            <div class="certificate-footer">
+                This certificate is issued under a free license. <br>
+                Designed with HTML and CSS.
+            </div>
+        </div>
+        <button class="download-button" onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+        async function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Capture the certificate content
+            const certificateElement = document.getElementById("certificate");
+            const certificateHTML = certificateElement.outerHTML;
+
+            // Add the certificate HTML to the PDF
+            await doc.html(certificateElement, {
+                callback: function (doc) {
+                    doc.save("Certificate.pdf");
+                },
+                x: 10,
+                y: 10,
+            });
+        }
+    </script>
+</body>
+</html>
